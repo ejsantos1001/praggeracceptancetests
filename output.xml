@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160909 15:51:58.285" generator="Robot 3.0 (Python 2.7.10 on darwin)">
+<suite source="/Users/ejsantos/Documents/robot/PraggerAcceptance/praggeracceptance.robot" id="s1" name="Praggeracceptance">
+<test id="s1-t1" name="Team Login">
+<kw name="GIVEN a user is able to open the team login page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${teamloginurl}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20160909 15:51:59.465" level="INFO">Opening browser 'chrome' to base url 'http://www.pragger.com/login'</msg>
+<status status="PASS" endtime="20160909 15:52:29.253" starttime="20160909 15:51:59.465"></status>
+</kw>
+<status status="PASS" endtime="20160909 15:52:29.253" starttime="20160909 15:51:59.463"></status>
+</kw>
+<kw name="AND a user submits a team login form" library="resource">
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>document.querySelector('${teamdomainfield_location_css}').value='&amp;{teamleaduser}[teamdomain]'</arg>
+</arguments>
+<msg timestamp="20160909 15:52:29.257" level="INFO">Executing JavaScript:
+document.querySelector('#home_login_team_web_address').value='qateam4'</msg>
+<status status="PASS" endtime="20160909 15:52:29.269" starttime="20160909 15:52:29.256"></status>
+</kw>
+<kw name="Simulate" library="Selenium2Library">
+<doc>Simulates `event` on element identified by `locator`.</doc>
+<arguments>
+<arg>css=${teamdomainfield_location_css}</arg>
+<arg>propertychange</arg>
+</arguments>
+<status status="PASS" endtime="20160909 15:52:29.315" starttime="20160909 15:52:29.269"></status>
+</kw>
+<kw name="let the team login spinner pass" library="resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=#home_login_team_web_address_refresh</arg>
+</arguments>
+<status status="PASS" endtime="20160909 15:52:29.403" starttime="20160909 15:52:29.316"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is not visible.</doc>
+<arguments>
+<arg>css=#home_login_team_web_address_refresh</arg>
+</arguments>
+<status status="PASS" endtime="20160909 15:52:33.370" starttime="20160909 15:52:29.404"></status>
+</kw>
+<status status="PASS" endtime="20160909 15:52:33.370" starttime="20160909 15:52:29.315"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>document.querySelector('${usernameemailfield_locatain_css}').value='&amp;{teamleaduser}[username]'</arg>
+</arguments>
+<msg timestamp="20160909 15:52:33.372" level="INFO">Executing JavaScript:
+document.querySelector('#home_login_username').value='teamlead'</msg>
+<status status="PASS" endtime="20160909 15:52:33.381" starttime="20160909 15:52:33.371"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>document.querySelector('${passwordfield_locaiton_css}').value='&amp;{teamleaduser}[password]'</arg>
+</arguments>
+<msg timestamp="20160909 15:52:33.383" level="INFO">Executing JavaScript:
+document.querySelector('#home_login_password').value='pass123'</msg>
+<status status="PASS" endtime="20160909 15:52:33.395" starttime="20160909 15:52:33.382"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${submit_button_css}</arg>
+</arguments>
+<msg timestamp="20160909 15:52:33.396" level="INFO">Clicking button 'css=#home_login_submit'.</msg>
+<status status="PASS" endtime="20160909 15:52:43.387" starttime="20160909 15:52:33.395"></status>
+</kw>
+<status status="PASS" endtime="20160909 15:52:43.387" starttime="20160909 15:52:29.255"></status>
+</kw>
+<kw name="THEN a user is able to open the team dashboard page" library="resource">
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${teamdashboardurl_actual}</var>
+</assign>
+<msg timestamp="20160909 15:52:43.390" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160909 15:52:43.402" level="INFO">${teamdashboardurl_actual} = http://qateam4.pragger.com/dashboard</msg>
+<status status="PASS" endtime="20160909 15:52:43.402" starttime="20160909 15:52:43.389"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${teamdashboardurl_actual}</arg>
+<arg>${teamdashboardurl}</arg>
+</arguments>
+<msg timestamp="20160909 15:52:43.404" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160909 15:52:43.404" starttime="20160909 15:52:43.403"></status>
+</kw>
+<status status="PASS" endtime="20160909 15:52:43.404" starttime="20160909 15:52:43.388"></status>
+</kw>
+<status status="PASS" endtime="20160909 15:52:43.405" critical="yes" starttime="20160909 15:51:59.462"></status>
+</test>
+<status status="PASS" endtime="20160909 15:52:43.421" starttime="20160909 15:51:58.287"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Praggeracceptance" pass="1">Praggeracceptance</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
