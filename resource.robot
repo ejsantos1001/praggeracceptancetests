@@ -20,26 +20,48 @@ a user sumbits a filled registration form
 
 a user is able to team login
     a user is able to open the team login page
-    a user navigates to the team login page
-    a user is able to open the team dashboard page
+    a user submits a team login form
+    a user lands on the team dashboard page
 
 a user is able to open the team login page
     Open Browser   ${teamloginurl}    chrome
 
 a user submits a team login form
-    Execute Javascript   document.querySelector('${teamdomainfield_location_css}').value='&{teamleaduser}[teamdomain]'
+    Execute Javascript   document.querySelector('${teamdomainfield_location_css}').value='&{teamleaduser}[teamname]'
     Simulate             css=${teamdomainfield_location_css}   propertychange
     let the team login spinner pass
     Execute Javascript   document.querySelector('${usernameemailfield_locatain_css}').value='&{teamleaduser}[username]'
     Execute Javascript   document.querySelector('${passwordfield_locaiton_css}').value='&{teamleaduser}[password]'
     Click Button    css=${submit_button_css}
 
-a user is able to open the team dashboard page
-    check current url  ${teamdashboardurl_actual} is equal to ${teamdashboardurl}
+a user lands on the team dashboard page
+    ${actual}      Execute Javascript   var url = location.href;   return url;
+    Should be equal   ${actual}       ${teamdashboardurl}
 
 
-a user is able to go to the employee admin page
-    check current url
+a user is able to add an employee
+    a user is able to go to the employee admin page from the dasboard
+    a user is able to submit employee data
+
+a user is able to go to the employee admin page from the dasboard
+    Wait until element is visible   css=${employee_admin_page_link_locator_css}
+    Click link   css=${employee_admin_page_link_locator_css}
+    ${actual}      Execute Javascript   var url = location.href;   return url;
+    Should be equal   ${actual}       ${employeeadminurl}
+
+a user is able to submit employee data
+    Click link   css=${add_employee_link_locator_css}
+    Input Text   css=${employee_code_field_locator_css}             &{employeedatagen}[employeecode]
+    Input Text   css=${employee_username_field_locator_css}         &{employeedatagen}[username]
+    Input Text   css=${employee_email_field_locator_css}            &{employeedatagen}[email]
+    Input Text   css=${employee_password_field_locator_css}         &{employeedatagen}[password]
+    Input Text   css=${employee_firstname_field_locator_css}        &{employeedatagen}[firstname]
+    Input Text   css=${employee_lastname_field_locator_css}         &{employeedatagen}[lastname]
+    Click Button  css=${add_employee_btn_locator_css}
+    Page should contain   css=${add_employee_success_message_locator_css}
+
+a user adds an employee
+    Click link    ${add_employee_link_locator_css}
 
 
 #utility keywords
@@ -47,6 +69,3 @@ let the team login spinner pass
     Wait Until Element Is Visible       css=#home_login_team_web_address_refresh
     Wait Until Element Is Not Visible   css=#home_login_team_web_address_refresh
 
-check current url "${actual}" is equal to "${expected}"
-    ${actual}      Execute Javascript   var url = location.href;   return url;
-    Should be equal   ${actual}       ${expected}

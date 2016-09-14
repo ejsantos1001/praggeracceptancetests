@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20160909 15:51:58.285" generator="Robot 3.0 (Python 2.7.10 on darwin)">
+<robot generated="20160914 16:24:00.977" generator="Robot 3.0 (Python 2.7.10 on darwin)">
 <suite source="/Users/ejsantos/Documents/robot/PraggerAcceptance/praggeracceptance.robot" id="s1" name="Praggeracceptance">
-<test id="s1-t1" name="Team Login">
-<kw name="GIVEN a user is able to open the team login page" library="resource">
+<test id="s1-t1" name="Add employee">
+<kw name="GIVEN a user is able to team login" library="resource">
+<kw name="a user is able to open the team login page" library="resource">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
 <arguments>
 <arg>${teamloginurl}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20160909 15:51:59.465" level="INFO">Opening browser 'chrome' to base url 'http://www.pragger.com/login'</msg>
-<status status="PASS" endtime="20160909 15:52:29.253" starttime="20160909 15:51:59.465"></status>
+<msg timestamp="20160914 16:24:02.325" level="INFO">Opening browser 'chrome' to base url 'http://www.pragger.com/login'</msg>
+<status status="PASS" endtime="20160914 16:24:07.614" starttime="20160914 16:24:02.325"></status>
 </kw>
-<status status="PASS" endtime="20160909 15:52:29.253" starttime="20160909 15:51:59.463"></status>
+<status status="PASS" endtime="20160914 16:24:07.615" starttime="20160914 16:24:02.324"></status>
 </kw>
-<kw name="AND a user submits a team login form" library="resource">
+<kw name="a user submits a team login form" library="resource">
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
-<arg>document.querySelector('${teamdomainfield_location_css}').value='&amp;{teamleaduser}[teamdomain]'</arg>
+<arg>document.querySelector('${teamdomainfield_location_css}').value='&amp;{teamleaduser}[teamname]'</arg>
 </arguments>
-<msg timestamp="20160909 15:52:29.257" level="INFO">Executing JavaScript:
+<msg timestamp="20160914 16:24:07.617" level="INFO">Executing JavaScript:
 document.querySelector('#home_login_team_web_address').value='qateam4'</msg>
-<status status="PASS" endtime="20160909 15:52:29.269" starttime="20160909 15:52:29.256"></status>
+<status status="PASS" endtime="20160914 16:24:07.626" starttime="20160914 16:24:07.616"></status>
 </kw>
 <kw name="Simulate" library="Selenium2Library">
 <doc>Simulates `event` on element identified by `locator`.</doc>
@@ -30,7 +31,7 @@ document.querySelector('#home_login_team_web_address').value='qateam4'</msg>
 <arg>css=${teamdomainfield_location_css}</arg>
 <arg>propertychange</arg>
 </arguments>
-<status status="PASS" endtime="20160909 15:52:29.315" starttime="20160909 15:52:29.269"></status>
+<status status="PASS" endtime="20160914 16:24:07.660" starttime="20160914 16:24:07.626"></status>
 </kw>
 <kw name="let the team login spinner pass" library="resource">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
@@ -38,46 +39,46 @@ document.querySelector('#home_login_team_web_address').value='qateam4'</msg>
 <arguments>
 <arg>css=#home_login_team_web_address_refresh</arg>
 </arguments>
-<status status="PASS" endtime="20160909 15:52:29.403" starttime="20160909 15:52:29.316"></status>
+<status status="PASS" endtime="20160914 16:24:07.721" starttime="20160914 16:24:07.661"></status>
 </kw>
 <kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is not visible.</doc>
 <arguments>
 <arg>css=#home_login_team_web_address_refresh</arg>
 </arguments>
-<status status="PASS" endtime="20160909 15:52:33.370" starttime="20160909 15:52:29.404"></status>
+<status status="PASS" endtime="20160914 16:24:08.618" starttime="20160914 16:24:07.721"></status>
 </kw>
-<status status="PASS" endtime="20160909 15:52:33.370" starttime="20160909 15:52:29.315"></status>
+<status status="PASS" endtime="20160914 16:24:08.618" starttime="20160914 16:24:07.661"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
 <arg>document.querySelector('${usernameemailfield_locatain_css}').value='&amp;{teamleaduser}[username]'</arg>
 </arguments>
-<msg timestamp="20160909 15:52:33.372" level="INFO">Executing JavaScript:
+<msg timestamp="20160914 16:24:08.619" level="INFO">Executing JavaScript:
 document.querySelector('#home_login_username').value='teamlead'</msg>
-<status status="PASS" endtime="20160909 15:52:33.381" starttime="20160909 15:52:33.371"></status>
+<status status="PASS" endtime="20160914 16:24:08.625" starttime="20160914 16:24:08.618"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
 <arg>document.querySelector('${passwordfield_locaiton_css}').value='&amp;{teamleaduser}[password]'</arg>
 </arguments>
-<msg timestamp="20160909 15:52:33.383" level="INFO">Executing JavaScript:
+<msg timestamp="20160914 16:24:08.627" level="INFO">Executing JavaScript:
 document.querySelector('#home_login_password').value='pass123'</msg>
-<status status="PASS" endtime="20160909 15:52:33.395" starttime="20160909 15:52:33.382"></status>
+<status status="PASS" endtime="20160914 16:24:08.632" starttime="20160914 16:24:08.626"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>css=${submit_button_css}</arg>
 </arguments>
-<msg timestamp="20160909 15:52:33.396" level="INFO">Clicking button 'css=#home_login_submit'.</msg>
-<status status="PASS" endtime="20160909 15:52:43.387" starttime="20160909 15:52:33.395"></status>
+<msg timestamp="20160914 16:24:08.633" level="INFO">Clicking button 'css=#home_login_submit'.</msg>
+<status status="PASS" endtime="20160914 16:24:12.364" starttime="20160914 16:24:08.632"></status>
 </kw>
-<status status="PASS" endtime="20160909 15:52:43.387" starttime="20160909 15:52:29.255"></status>
+<status status="PASS" endtime="20160914 16:24:12.365" starttime="20160914 16:24:07.615"></status>
 </kw>
-<kw name="THEN a user is able to open the team dashboard page" library="resource">
+<kw name="a user lands on the team dashboard page" library="resource">
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
@@ -85,29 +86,150 @@ document.querySelector('#home_login_password').value='pass123'</msg>
 <arg>return url;</arg>
 </arguments>
 <assign>
-<var>${teamdashboardurl_actual}</var>
+<var>${actual}</var>
 </assign>
-<msg timestamp="20160909 15:52:43.390" level="INFO">Executing JavaScript:
+<msg timestamp="20160914 16:24:12.366" level="INFO">Executing JavaScript:
 var url = location.href;return url;</msg>
-<msg timestamp="20160909 15:52:43.402" level="INFO">${teamdashboardurl_actual} = http://qateam4.pragger.com/dashboard</msg>
-<status status="PASS" endtime="20160909 15:52:43.402" starttime="20160909 15:52:43.389"></status>
+<msg timestamp="20160914 16:24:12.374" level="INFO">${actual} = http://qateam4.pragger.com/dashboard</msg>
+<status status="PASS" endtime="20160914 16:24:12.374" starttime="20160914 16:24:12.366"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
 <arguments>
-<arg>${teamdashboardurl_actual}</arg>
+<arg>${actual}</arg>
 <arg>${teamdashboardurl}</arg>
 </arguments>
-<msg timestamp="20160909 15:52:43.404" level="INFO">Argument types are:
+<msg timestamp="20160914 16:24:12.375" level="INFO">Argument types are:
 &lt;type 'unicode'&gt;
 &lt;type 'str'&gt;</msg>
-<status status="PASS" endtime="20160909 15:52:43.404" starttime="20160909 15:52:43.403"></status>
+<status status="PASS" endtime="20160914 16:24:12.375" starttime="20160914 16:24:12.374"></status>
 </kw>
-<status status="PASS" endtime="20160909 15:52:43.404" starttime="20160909 15:52:43.388"></status>
+<status status="PASS" endtime="20160914 16:24:12.375" starttime="20160914 16:24:12.365"></status>
 </kw>
-<status status="PASS" endtime="20160909 15:52:43.405" critical="yes" starttime="20160909 15:51:59.462"></status>
+<status status="PASS" endtime="20160914 16:24:12.376" starttime="20160914 16:24:02.324"></status>
+</kw>
+<kw name="THEN a user is able to add an employee" library="resource">
+<kw name="a user is able to go to the employee admin page from the dasboard" library="resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 16:24:12.416" starttime="20160914 16:24:12.378"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 16:24:12.417" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 16:24:12.865" starttime="20160914 16:24:12.416"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 16:24:12.866" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 16:24:12.870" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 16:24:12.871" starttime="20160914 16:24:12.865"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 16:24:12.871" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 16:24:12.871" starttime="20160914 16:24:12.871"></status>
+</kw>
+<status status="PASS" endtime="20160914 16:24:12.871" starttime="20160914 16:24:12.377"></status>
+</kw>
+<kw name="a user is able to submit employee data" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 16:24:12.873" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 16:24:13.417" starttime="20160914 16:24:12.872"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>&amp;{employeedatagen}[employeecode]</arg>
+</arguments>
+<msg timestamp="20160914 16:24:13.419" level="INFO">Typing text 'c9be3f69edb58ba12941a44cc5f9688b' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 16:24:13.601" starttime="20160914 16:24:13.417"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>&amp;{employeedatagen}[username]</arg>
+</arguments>
+<msg timestamp="20160914 16:24:13.603" level="INFO">Typing text 'Kelly Meza' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 16:24:13.835" starttime="20160914 16:24:13.602"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>&amp;{employeedatagen}[email]</arg>
+</arguments>
+<msg timestamp="20160914 16:24:13.836" level="INFO">Typing text 'wunicholas@lee-rodgers.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 16:24:13.968" starttime="20160914 16:24:13.836"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>&amp;{employeedatagen}[password]</arg>
+</arguments>
+<msg timestamp="20160914 16:24:13.969" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 16:24:14.077" starttime="20160914 16:24:13.968"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>&amp;{employeedatagen}[firstname]</arg>
+</arguments>
+<msg timestamp="20160914 16:24:14.078" level="INFO">Typing text 'William' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 16:24:14.177" starttime="20160914 16:24:14.077"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>&amp;{employeedatagen}[lastname]</arg>
+</arguments>
+<msg timestamp="20160914 16:24:14.177" level="INFO">Typing text 'Carson' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 16:24:14.273" starttime="20160914 16:24:14.177"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 16:24:14.274" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 16:24:15.239" starttime="20160914 16:24:14.274"></status>
+</kw>
+<status status="PASS" endtime="20160914 16:24:15.240" starttime="20160914 16:24:12.872"></status>
+</kw>
+<status status="PASS" endtime="20160914 16:24:15.240" starttime="20160914 16:24:12.377"></status>
+</kw>
+<status status="PASS" endtime="20160914 16:24:15.240" critical="yes" starttime="20160914 16:24:02.323"></status>
 </test>
-<status status="PASS" endtime="20160909 15:52:43.421" starttime="20160909 15:51:58.287"></status>
+<status status="PASS" endtime="20160914 16:24:15.243" starttime="20160914 16:24:00.979"></status>
 </suite>
 <statistics>
 <total>

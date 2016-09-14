@@ -11,9 +11,6 @@ Team Login
     THEN a user is able to open the team dashboard page
 
 Add employee
-
     GIVEN a user is able to team login
-    AND a user is able to go to the employee admin page
+    THEN a user is able to add an employee
 
-
-tesalkfjasldfjasldkfj
