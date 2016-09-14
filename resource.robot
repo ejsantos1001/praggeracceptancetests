@@ -1,5 +1,6 @@
 *** Settings ***
 Library     Selenium2Library
+Library     String
 Variables   locators.py
 Variables   data.py
 
@@ -39,29 +40,24 @@ a user lands on the team dashboard page
     Should be equal   ${actual}       ${teamdashboardurl}
 
 
-a user is able to add an employee
-    a user is able to go to the employee admin page from the dasboard
-    a user is able to submit employee data
-
-a user is able to go to the employee admin page from the dasboard
-    Wait until element is visible   css=${employee_admin_page_link_locator_css}
-    Click link   css=${employee_admin_page_link_locator_css}
-    ${actual}      Execute Javascript   var url = location.href;   return url;
-    Should be equal   ${actual}       ${employeeadminurl}
-
 a user is able to submit employee data
-    Click link   css=${add_employee_link_locator_css}
-    Input Text   css=${employee_code_field_locator_css}             &{employeedatagen}[employeecode]
-    Input Text   css=${employee_username_field_locator_css}         &{employeedatagen}[username]
-    Input Text   css=${employee_email_field_locator_css}            &{employeedatagen}[email]
-    Input Text   css=${employee_password_field_locator_css}         &{employeedatagen}[password]
-    Input Text   css=${employee_firstname_field_locator_css}        &{employeedatagen}[firstname]
-    Input Text   css=${employee_lastname_field_locator_css}         &{employeedatagen}[lastname]
-    Click Button  css=${add_employee_btn_locator_css}
-    Page should contain   css=${add_employee_success_message_locator_css}
 
-a user adds an employee
-    Click link    ${add_employee_link_locator_css}
+    :FOR  ${X}  IN  @{employeelist}
+        \    @{employeedatagen}   Split String   ${X}    separator=,
+        \    Wait until element is visible   css=${employee_admin_page_link_locator_css}
+        \    Click link   css=${employee_admin_page_link_locator_css}
+        \    ${actual}      Execute Javascript   var url = location.href;   return url;
+        \    Should be equal   ${actual}       ${employeeadminurl}
+        \    Click link   css=${add_employee_link_locator_css}
+        \    Input Text   css=${employee_code_field_locator_css}             @{employeedatagen}[0]
+        \    Input Text   css=${employee_username_field_locator_css}         @{employeedatagen}[1]
+        \    Input Text   css=${employee_email_field_locator_css}            @{employeedatagen}[2]
+        \    Input Text   css=${employee_password_field_locator_css}         @{employeedatagen}[3]
+        \    Input Text   css=${employee_firstname_field_locator_css}        @{employeedatagen}[4]
+        \    Input Text   css=${employee_lastname_field_locator_css}         @{employeedatagen}[5]
+        \    Click Button  css=${add_employee_btn_locator_css}
+
+
 
 
 #utility keywords

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20160914 16:24:00.977" generator="Robot 3.0 (Python 2.7.10 on darwin)">
+<robot generated="20160914 19:35:43.862" generator="Robot 3.0 (Python 2.7.10 on darwin)">
 <suite source="/Users/ejsantos/Documents/robot/PraggerAcceptance/praggeracceptance.robot" id="s1" name="Praggeracceptance">
 <test id="s1-t1" name="Add employee">
 <kw name="GIVEN a user is able to team login" library="resource">
@@ -10,10 +10,10 @@
 <arg>${teamloginurl}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20160914 16:24:02.325" level="INFO">Opening browser 'chrome' to base url 'http://www.pragger.com/login'</msg>
-<status status="PASS" endtime="20160914 16:24:07.614" starttime="20160914 16:24:02.325"></status>
+<msg timestamp="20160914 19:35:47.537" level="INFO">Opening browser 'chrome' to base url 'http://www.pragger.com/login'</msg>
+<status status="PASS" endtime="20160914 19:36:00.236" starttime="20160914 19:35:47.537"></status>
 </kw>
-<status status="PASS" endtime="20160914 16:24:07.615" starttime="20160914 16:24:02.324"></status>
+<status status="PASS" endtime="20160914 19:36:00.238" starttime="20160914 19:35:47.536"></status>
 </kw>
 <kw name="a user submits a team login form" library="resource">
 <kw name="Execute Javascript" library="Selenium2Library">
@@ -21,9 +21,9 @@
 <arguments>
 <arg>document.querySelector('${teamdomainfield_location_css}').value='&amp;{teamleaduser}[teamname]'</arg>
 </arguments>
-<msg timestamp="20160914 16:24:07.617" level="INFO">Executing JavaScript:
+<msg timestamp="20160914 19:36:00.240" level="INFO">Executing JavaScript:
 document.querySelector('#home_login_team_web_address').value='qateam4'</msg>
-<status status="PASS" endtime="20160914 16:24:07.626" starttime="20160914 16:24:07.616"></status>
+<status status="PASS" endtime="20160914 19:36:00.250" starttime="20160914 19:36:00.239"></status>
 </kw>
 <kw name="Simulate" library="Selenium2Library">
 <doc>Simulates `event` on element identified by `locator`.</doc>
@@ -31,7 +31,7 @@ document.querySelector('#home_login_team_web_address').value='qateam4'</msg>
 <arg>css=${teamdomainfield_location_css}</arg>
 <arg>propertychange</arg>
 </arguments>
-<status status="PASS" endtime="20160914 16:24:07.660" starttime="20160914 16:24:07.626"></status>
+<status status="PASS" endtime="20160914 19:36:00.318" starttime="20160914 19:36:00.250"></status>
 </kw>
 <kw name="let the team login spinner pass" library="resource">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
@@ -39,44 +39,44 @@ document.querySelector('#home_login_team_web_address').value='qateam4'</msg>
 <arguments>
 <arg>css=#home_login_team_web_address_refresh</arg>
 </arguments>
-<status status="PASS" endtime="20160914 16:24:07.721" starttime="20160914 16:24:07.661"></status>
+<status status="PASS" endtime="20160914 19:36:00.388" starttime="20160914 19:36:00.320"></status>
 </kw>
 <kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is not visible.</doc>
 <arguments>
 <arg>css=#home_login_team_web_address_refresh</arg>
 </arguments>
-<status status="PASS" endtime="20160914 16:24:08.618" starttime="20160914 16:24:07.721"></status>
+<status status="PASS" endtime="20160914 19:36:01.934" starttime="20160914 19:36:00.389"></status>
 </kw>
-<status status="PASS" endtime="20160914 16:24:08.618" starttime="20160914 16:24:07.661"></status>
+<status status="PASS" endtime="20160914 19:36:01.934" starttime="20160914 19:36:00.319"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
 <arg>document.querySelector('${usernameemailfield_locatain_css}').value='&amp;{teamleaduser}[username]'</arg>
 </arguments>
-<msg timestamp="20160914 16:24:08.619" level="INFO">Executing JavaScript:
+<msg timestamp="20160914 19:36:01.935" level="INFO">Executing JavaScript:
 document.querySelector('#home_login_username').value='teamlead'</msg>
-<status status="PASS" endtime="20160914 16:24:08.625" starttime="20160914 16:24:08.618"></status>
+<status status="PASS" endtime="20160914 19:36:01.941" starttime="20160914 19:36:01.934"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
 <arg>document.querySelector('${passwordfield_locaiton_css}').value='&amp;{teamleaduser}[password]'</arg>
 </arguments>
-<msg timestamp="20160914 16:24:08.627" level="INFO">Executing JavaScript:
+<msg timestamp="20160914 19:36:01.943" level="INFO">Executing JavaScript:
 document.querySelector('#home_login_password').value='pass123'</msg>
-<status status="PASS" endtime="20160914 16:24:08.632" starttime="20160914 16:24:08.626"></status>
+<status status="PASS" endtime="20160914 19:36:01.949" starttime="20160914 19:36:01.942"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>css=${submit_button_css}</arg>
 </arguments>
-<msg timestamp="20160914 16:24:08.633" level="INFO">Clicking button 'css=#home_login_submit'.</msg>
-<status status="PASS" endtime="20160914 16:24:12.364" starttime="20160914 16:24:08.632"></status>
+<msg timestamp="20160914 19:36:01.949" level="INFO">Clicking button 'css=#home_login_submit'.</msg>
+<status status="PASS" endtime="20160914 19:36:07.742" starttime="20160914 19:36:01.949"></status>
 </kw>
-<status status="PASS" endtime="20160914 16:24:12.365" starttime="20160914 16:24:07.615"></status>
+<status status="PASS" endtime="20160914 19:36:07.742" starttime="20160914 19:36:00.238"></status>
 </kw>
 <kw name="a user lands on the team dashboard page" library="resource">
 <kw name="Execute Javascript" library="Selenium2Library">
@@ -88,10 +88,10 @@ document.querySelector('#home_login_password').value='pass123'</msg>
 <assign>
 <var>${actual}</var>
 </assign>
-<msg timestamp="20160914 16:24:12.366" level="INFO">Executing JavaScript:
+<msg timestamp="20160914 19:36:07.744" level="INFO">Executing JavaScript:
 var url = location.href;return url;</msg>
-<msg timestamp="20160914 16:24:12.374" level="INFO">${actual} = http://qateam4.pragger.com/dashboard</msg>
-<status status="PASS" endtime="20160914 16:24:12.374" starttime="20160914 16:24:12.366"></status>
+<msg timestamp="20160914 19:36:07.756" level="INFO">${actual} = http://qateam4.pragger.com/dashboard</msg>
+<status status="PASS" endtime="20160914 19:36:07.757" starttime="20160914 19:36:07.743"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -99,31 +99,44 @@ var url = location.href;return url;</msg>
 <arg>${actual}</arg>
 <arg>${teamdashboardurl}</arg>
 </arguments>
-<msg timestamp="20160914 16:24:12.375" level="INFO">Argument types are:
+<msg timestamp="20160914 19:36:07.758" level="INFO">Argument types are:
 &lt;type 'unicode'&gt;
 &lt;type 'str'&gt;</msg>
-<status status="PASS" endtime="20160914 16:24:12.375" starttime="20160914 16:24:12.374"></status>
+<status status="PASS" endtime="20160914 19:36:07.758" starttime="20160914 19:36:07.757"></status>
 </kw>
-<status status="PASS" endtime="20160914 16:24:12.375" starttime="20160914 16:24:12.365"></status>
+<status status="PASS" endtime="20160914 19:36:07.758" starttime="20160914 19:36:07.742"></status>
 </kw>
-<status status="PASS" endtime="20160914 16:24:12.376" starttime="20160914 16:24:02.324"></status>
+<status status="PASS" endtime="20160914 19:36:07.759" starttime="20160914 19:35:47.536"></status>
 </kw>
-<kw name="THEN a user is able to add an employee" library="resource">
-<kw name="a user is able to go to the employee admin page from the dasboard" library="resource">
+<kw name="THEN a user is able to submit employee data" library="resource">
+<kw type="for" name="${X} IN [ @{employeelist} ]">
+<kw type="foritem" name="${X} = b12949e7be0512de43edb853cb5d1c27,Robert,sara11@mitchell-james.com,pass123,Brenda,Cruz">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:07.762" level="INFO">@{employeedatagen} = [ b12949e7be0512de43edb853cb5d1c27 | Robert | sara11@mitchell-james.com | pass123 | Brenda | Cruz ]</msg>
+<status status="PASS" endtime="20160914 19:36:07.762" starttime="20160914 19:36:07.761"></status>
+</kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>css=${employee_admin_page_link_locator_css}</arg>
 </arguments>
-<status status="PASS" endtime="20160914 16:24:12.416" starttime="20160914 16:24:12.378"></status>
+<status status="PASS" endtime="20160914 19:36:07.807" starttime="20160914 19:36:07.762"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by locator.</doc>
 <arguments>
 <arg>css=${employee_admin_page_link_locator_css}</arg>
 </arguments>
-<msg timestamp="20160914 16:24:12.417" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
-<status status="PASS" endtime="20160914 16:24:12.865" starttime="20160914 16:24:12.416"></status>
+<msg timestamp="20160914 19:36:07.807" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:08.296" starttime="20160914 19:36:07.807"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
@@ -134,10 +147,10 @@ var url = location.href;return url;</msg>
 <assign>
 <var>${actual}</var>
 </assign>
-<msg timestamp="20160914 16:24:12.866" level="INFO">Executing JavaScript:
+<msg timestamp="20160914 19:36:08.297" level="INFO">Executing JavaScript:
 var url = location.href;return url;</msg>
-<msg timestamp="20160914 16:24:12.870" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
-<status status="PASS" endtime="20160914 16:24:12.871" starttime="20160914 16:24:12.865"></status>
+<msg timestamp="20160914 19:36:08.302" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:08.302" starttime="20160914 19:36:08.296"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -145,91 +158,2340 @@ var url = location.href;return url;</msg>
 <arg>${actual}</arg>
 <arg>${employeeadminurl}</arg>
 </arguments>
-<msg timestamp="20160914 16:24:12.871" level="INFO">Argument types are:
+<msg timestamp="20160914 19:36:08.304" level="INFO">Argument types are:
 &lt;type 'unicode'&gt;
 &lt;type 'str'&gt;</msg>
-<status status="PASS" endtime="20160914 16:24:12.871" starttime="20160914 16:24:12.871"></status>
+<status status="PASS" endtime="20160914 19:36:08.304" starttime="20160914 19:36:08.303"></status>
 </kw>
-<status status="PASS" endtime="20160914 16:24:12.871" starttime="20160914 16:24:12.377"></status>
-</kw>
-<kw name="a user is able to submit employee data" library="resource">
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by locator.</doc>
 <arguments>
 <arg>css=${add_employee_link_locator_css}</arg>
 </arguments>
-<msg timestamp="20160914 16:24:12.873" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
-<status status="PASS" endtime="20160914 16:24:13.417" starttime="20160914 16:24:12.872"></status>
+<msg timestamp="20160914 19:36:08.304" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:09.028" starttime="20160914 19:36:08.304"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>css=${employee_code_field_locator_css}</arg>
-<arg>&amp;{employeedatagen}[employeecode]</arg>
+<arg>@{employeedatagen}[0]</arg>
 </arguments>
-<msg timestamp="20160914 16:24:13.419" level="INFO">Typing text 'c9be3f69edb58ba12941a44cc5f9688b' into text field 'css=#add_employee_employee_number'</msg>
-<status status="PASS" endtime="20160914 16:24:13.601" starttime="20160914 16:24:13.417"></status>
+<msg timestamp="20160914 19:36:09.029" level="INFO">Typing text 'b12949e7be0512de43edb853cb5d1c27' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:09.247" starttime="20160914 19:36:09.028"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>css=${employee_username_field_locator_css}</arg>
-<arg>&amp;{employeedatagen}[username]</arg>
+<arg>@{employeedatagen}[1]</arg>
 </arguments>
-<msg timestamp="20160914 16:24:13.603" level="INFO">Typing text 'Kelly Meza' into text field 'css=#add_employee_username'</msg>
-<status status="PASS" endtime="20160914 16:24:13.835" starttime="20160914 16:24:13.602"></status>
+<msg timestamp="20160914 19:36:09.249" level="INFO">Typing text 'Robert' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:09.358" starttime="20160914 19:36:09.248"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>css=${employee_email_field_locator_css}</arg>
-<arg>&amp;{employeedatagen}[email]</arg>
+<arg>@{employeedatagen}[2]</arg>
 </arguments>
-<msg timestamp="20160914 16:24:13.836" level="INFO">Typing text 'wunicholas@lee-rodgers.com' into text field 'css=#add_employee_email'</msg>
-<status status="PASS" endtime="20160914 16:24:13.968" starttime="20160914 16:24:13.836"></status>
+<msg timestamp="20160914 19:36:09.359" level="INFO">Typing text 'sara11@mitchell-james.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:09.773" starttime="20160914 19:36:09.359"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>css=${employee_password_field_locator_css}</arg>
-<arg>&amp;{employeedatagen}[password]</arg>
+<arg>@{employeedatagen}[3]</arg>
 </arguments>
-<msg timestamp="20160914 16:24:13.969" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
-<status status="PASS" endtime="20160914 16:24:14.077" starttime="20160914 16:24:13.968"></status>
+<msg timestamp="20160914 19:36:09.774" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:09.896" starttime="20160914 19:36:09.773"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>css=${employee_firstname_field_locator_css}</arg>
-<arg>&amp;{employeedatagen}[firstname]</arg>
+<arg>@{employeedatagen}[4]</arg>
 </arguments>
-<msg timestamp="20160914 16:24:14.078" level="INFO">Typing text 'William' into text field 'css=#add_employee_first_name'</msg>
-<status status="PASS" endtime="20160914 16:24:14.177" starttime="20160914 16:24:14.077"></status>
+<msg timestamp="20160914 19:36:09.897" level="INFO">Typing text 'Brenda' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:10.005" starttime="20160914 19:36:09.896"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>css=${employee_lastname_field_locator_css}</arg>
-<arg>&amp;{employeedatagen}[lastname]</arg>
+<arg>@{employeedatagen}[5]</arg>
 </arguments>
-<msg timestamp="20160914 16:24:14.177" level="INFO">Typing text 'Carson' into text field 'css=#add_employee_last_name'</msg>
-<status status="PASS" endtime="20160914 16:24:14.273" starttime="20160914 16:24:14.177"></status>
+<msg timestamp="20160914 19:36:10.005" level="INFO">Typing text 'Cruz' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:10.102" starttime="20160914 19:36:10.005"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>css=${add_employee_btn_locator_css}</arg>
 </arguments>
-<msg timestamp="20160914 16:24:14.274" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
-<status status="PASS" endtime="20160914 16:24:15.239" starttime="20160914 16:24:14.274"></status>
+<msg timestamp="20160914 19:36:10.103" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:11.014" starttime="20160914 19:36:10.102"></status>
 </kw>
-<status status="PASS" endtime="20160914 16:24:15.240" starttime="20160914 16:24:12.872"></status>
+<status status="PASS" endtime="20160914 19:36:11.014" starttime="20160914 19:36:07.761"></status>
 </kw>
-<status status="PASS" endtime="20160914 16:24:15.240" starttime="20160914 16:24:12.377"></status>
+<kw type="foritem" name="${X} = 27909f8809402913366edfc1de89b534,Tony,richard55@wilkinson.com,pass123,Nathan,Stevens">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:11.016" level="INFO">@{employeedatagen} = [ 27909f8809402913366edfc1de89b534 | Tony | richard55@wilkinson.com | pass123 | Nathan | Stevens ]</msg>
+<status status="PASS" endtime="20160914 19:36:11.016" starttime="20160914 19:36:11.015"></status>
 </kw>
-<status status="PASS" endtime="20160914 16:24:15.240" critical="yes" starttime="20160914 16:24:02.323"></status>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:11.064" starttime="20160914 19:36:11.016"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:11.065" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:11.649" starttime="20160914 19:36:11.065"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:11.650" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:11.657" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:11.657" starttime="20160914 19:36:11.649"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:11.658" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:11.658" starttime="20160914 19:36:11.657"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:11.658" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:12.120" starttime="20160914 19:36:11.658"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:12.122" level="INFO">Typing text '27909f8809402913366edfc1de89b534' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:12.258" starttime="20160914 19:36:12.121"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:12.259" level="INFO">Typing text 'Tony' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:12.349" starttime="20160914 19:36:12.258"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:12.350" level="INFO">Typing text 'richard55@wilkinson.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:12.469" starttime="20160914 19:36:12.349"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:12.470" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:12.597" starttime="20160914 19:36:12.470"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:12.598" level="INFO">Typing text 'Nathan' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:12.706" starttime="20160914 19:36:12.597"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:12.707" level="INFO">Typing text 'Stevens' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:12.800" starttime="20160914 19:36:12.706"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:12.801" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:13.292" starttime="20160914 19:36:12.800"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:13.292" starttime="20160914 19:36:11.014"></status>
+</kw>
+<kw type="foritem" name="${X} = 0741fd9e31555ea5d87cc987153e8074,Joel,anthonymoran@yahoo.com,pass123,Anthony,Burns">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:13.293" level="INFO">@{employeedatagen} = [ 0741fd9e31555ea5d87cc987153e8074 | Joel | anthonymoran@yahoo.com | pass123 | Anthony | Burns ]</msg>
+<status status="PASS" endtime="20160914 19:36:13.293" starttime="20160914 19:36:13.293"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:13.324" starttime="20160914 19:36:13.294"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:13.325" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:13.872" starttime="20160914 19:36:13.325"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:13.873" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:13.879" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:13.879" starttime="20160914 19:36:13.872"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:13.880" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:13.880" starttime="20160914 19:36:13.880"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:13.881" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:14.781" starttime="20160914 19:36:13.880"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:14.782" level="INFO">Typing text '0741fd9e31555ea5d87cc987153e8074' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:14.947" starttime="20160914 19:36:14.781"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:14.948" level="INFO">Typing text 'Joel' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:15.034" starttime="20160914 19:36:14.947"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:15.035" level="INFO">Typing text 'anthonymoran@yahoo.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:15.156" starttime="20160914 19:36:15.034"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:15.157" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:15.246" starttime="20160914 19:36:15.156"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:15.247" level="INFO">Typing text 'Anthony' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:15.347" starttime="20160914 19:36:15.246"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:15.348" level="INFO">Typing text 'Burns' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:15.440" starttime="20160914 19:36:15.347"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:15.441" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:16.017" starttime="20160914 19:36:15.440"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:16.017" starttime="20160914 19:36:13.292"></status>
+</kw>
+<kw type="foritem" name="${X} = 3e58ba5c10cf59e604fa1fd4c19b4e2b,Michele,xbarber@wolfe-williams.com,pass123,Jennifer,Hill">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:16.019" level="INFO">@{employeedatagen} = [ 3e58ba5c10cf59e604fa1fd4c19b4e2b | Michele | xbarber@wolfe-williams.com | pass123 | Jennifer | Hill ]</msg>
+<status status="PASS" endtime="20160914 19:36:16.019" starttime="20160914 19:36:16.018"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:16.217" starttime="20160914 19:36:16.019"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:16.218" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:16.748" starttime="20160914 19:36:16.218"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:16.749" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:16.754" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:16.754" starttime="20160914 19:36:16.748"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:16.754" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:16.755" starttime="20160914 19:36:16.754"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:16.755" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:17.277" starttime="20160914 19:36:16.755"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:17.278" level="INFO">Typing text '3e58ba5c10cf59e604fa1fd4c19b4e2b' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:17.444" starttime="20160914 19:36:17.277"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:17.445" level="INFO">Typing text 'Michele' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:17.535" starttime="20160914 19:36:17.444"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:17.536" level="INFO">Typing text 'xbarber@wolfe-williams.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:17.659" starttime="20160914 19:36:17.535"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:17.660" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:17.752" starttime="20160914 19:36:17.659"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:17.753" level="INFO">Typing text 'Jennifer' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:17.850" starttime="20160914 19:36:17.752"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:17.852" level="INFO">Typing text 'Hill' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:17.943" starttime="20160914 19:36:17.851"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:17.945" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:19.076" starttime="20160914 19:36:17.944"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:19.076" starttime="20160914 19:36:16.017"></status>
+</kw>
+<kw type="foritem" name="${X} = 4b82bd3911dfc1cb5276dcf3b1be0945,Tina,kellyfranklin@gmail.com,pass123,Karen,Murray">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:19.078" level="INFO">@{employeedatagen} = [ 4b82bd3911dfc1cb5276dcf3b1be0945 | Tina | kellyfranklin@gmail.com | pass123 | Karen | Murray ]</msg>
+<status status="PASS" endtime="20160914 19:36:19.078" starttime="20160914 19:36:19.077"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:19.104" starttime="20160914 19:36:19.078"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:19.104" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:19.669" starttime="20160914 19:36:19.104"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:19.669" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:19.676" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:19.676" starttime="20160914 19:36:19.669"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:19.677" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:19.677" starttime="20160914 19:36:19.676"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:19.678" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:20.478" starttime="20160914 19:36:19.677"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:20.479" level="INFO">Typing text '4b82bd3911dfc1cb5276dcf3b1be0945' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:20.644" starttime="20160914 19:36:20.478"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:20.645" level="INFO">Typing text 'Tina' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:20.766" starttime="20160914 19:36:20.644"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:20.767" level="INFO">Typing text 'kellyfranklin@gmail.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:20.884" starttime="20160914 19:36:20.767"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:20.885" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:20.974" starttime="20160914 19:36:20.884"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:20.975" level="INFO">Typing text 'Karen' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:21.061" starttime="20160914 19:36:20.974"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:21.062" level="INFO">Typing text 'Murray' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:21.149" starttime="20160914 19:36:21.061"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:21.150" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:21.668" starttime="20160914 19:36:21.149"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:21.668" starttime="20160914 19:36:19.077"></status>
+</kw>
+<kw type="foritem" name="${X} = 2b4cff6d9942a2af1d040c13cb094527,Mark,nmendez@gmail.com,pass123,Maria,Townsend">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:21.670" level="INFO">@{employeedatagen} = [ 2b4cff6d9942a2af1d040c13cb094527 | Mark | nmendez@gmail.com | pass123 | Maria | Townsend ]</msg>
+<status status="PASS" endtime="20160914 19:36:21.670" starttime="20160914 19:36:21.669"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:21.702" starttime="20160914 19:36:21.670"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:21.703" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:22.207" starttime="20160914 19:36:21.702"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:22.208" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:22.213" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:22.213" starttime="20160914 19:36:22.207"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:22.213" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:22.213" starttime="20160914 19:36:22.213"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:22.214" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:23.498" starttime="20160914 19:36:22.214"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:23.499" level="INFO">Typing text '2b4cff6d9942a2af1d040c13cb094527' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:23.645" starttime="20160914 19:36:23.498"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:23.646" level="INFO">Typing text 'Mark' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:23.767" starttime="20160914 19:36:23.645"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:23.768" level="INFO">Typing text 'nmendez@gmail.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:23.874" starttime="20160914 19:36:23.768"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:23.875" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:23.972" starttime="20160914 19:36:23.874"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:23.973" level="INFO">Typing text 'Maria' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:24.065" starttime="20160914 19:36:23.973"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:24.065" level="INFO">Typing text 'Townsend' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:24.157" starttime="20160914 19:36:24.065"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:24.158" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:24.683" starttime="20160914 19:36:24.157"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:24.683" starttime="20160914 19:36:21.669"></status>
+</kw>
+<kw type="foritem" name="${X} = 0b387419b120cbbe4e4a3530d10ad682,Hannah,christopher12@hodges-hill.com,pass123,Ellen,Rodriguez">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:24.684" level="INFO">@{employeedatagen} = [ 0b387419b120cbbe4e4a3530d10ad682 | Hannah | christopher12@hodges-hill.com | pass123 | Ellen | Rodriguez ]</msg>
+<status status="PASS" endtime="20160914 19:36:24.684" starttime="20160914 19:36:24.683"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:24.721" starttime="20160914 19:36:24.684"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:24.722" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:25.136" starttime="20160914 19:36:24.721"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:25.137" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:25.146" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:25.146" starttime="20160914 19:36:25.137"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:25.147" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:25.147" starttime="20160914 19:36:25.146"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:25.147" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:26.176" starttime="20160914 19:36:25.147"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:26.177" level="INFO">Typing text '0b387419b120cbbe4e4a3530d10ad682' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:26.364" starttime="20160914 19:36:26.176"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:26.365" level="INFO">Typing text 'Hannah' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:26.453" starttime="20160914 19:36:26.364"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:26.454" level="INFO">Typing text 'christopher12@hodges-hill.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:26.581" starttime="20160914 19:36:26.453"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:26.583" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:26.676" starttime="20160914 19:36:26.582"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:26.677" level="INFO">Typing text 'Ellen' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:26.763" starttime="20160914 19:36:26.676"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:26.764" level="INFO">Typing text 'Rodriguez' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:26.853" starttime="20160914 19:36:26.763"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:26.854" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:27.465" starttime="20160914 19:36:26.853"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:27.465" starttime="20160914 19:36:24.683"></status>
+</kw>
+<kw type="foritem" name="${X} = af3e92bb05f3db5d04d444d7b9b139a8,Nicholas,brownbrian@stanley.net,pass123,Joseph,Olsen">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:27.466" level="INFO">@{employeedatagen} = [ af3e92bb05f3db5d04d444d7b9b139a8 | Nicholas | brownbrian@stanley.net | pass123 | Joseph | Olsen ]</msg>
+<status status="PASS" endtime="20160914 19:36:27.466" starttime="20160914 19:36:27.466"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:27.499" starttime="20160914 19:36:27.466"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:27.500" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:28.045" starttime="20160914 19:36:27.499"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:28.046" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:28.052" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:28.052" starttime="20160914 19:36:28.046"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:28.052" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:28.052" starttime="20160914 19:36:28.052"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:28.053" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:28.718" starttime="20160914 19:36:28.053"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:28.719" level="INFO">Typing text 'af3e92bb05f3db5d04d444d7b9b139a8' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:28.852" starttime="20160914 19:36:28.718"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:28.854" level="INFO">Typing text 'Nicholas' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:28.989" starttime="20160914 19:36:28.853"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:28.989" level="INFO">Typing text 'brownbrian@stanley.net' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:29.100" starttime="20160914 19:36:28.989"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:29.101" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:29.194" starttime="20160914 19:36:29.100"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:29.195" level="INFO">Typing text 'Joseph' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:29.278" starttime="20160914 19:36:29.195"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:29.279" level="INFO">Typing text 'Olsen' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:29.359" starttime="20160914 19:36:29.278"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:29.360" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:30.265" starttime="20160914 19:36:29.360"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:30.265" starttime="20160914 19:36:27.465"></status>
+</kw>
+<kw type="foritem" name="${X} = 26819e8e29c37e6f8721c3abfd54e2e1,Rebecca,seth36@clark.com,pass123,David,Guzman">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:30.267" level="INFO">@{employeedatagen} = [ 26819e8e29c37e6f8721c3abfd54e2e1 | Rebecca | seth36@clark.com | pass123 | David | Guzman ]</msg>
+<status status="PASS" endtime="20160914 19:36:30.267" starttime="20160914 19:36:30.266"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:30.306" starttime="20160914 19:36:30.267"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:30.307" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:30.813" starttime="20160914 19:36:30.307"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:30.815" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:30.823" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:30.823" starttime="20160914 19:36:30.814"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:30.823" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:30.823" starttime="20160914 19:36:30.823"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:30.824" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:31.609" starttime="20160914 19:36:30.823"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:31.610" level="INFO">Typing text '26819e8e29c37e6f8721c3abfd54e2e1' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:31.785" starttime="20160914 19:36:31.610"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:31.786" level="INFO">Typing text 'Rebecca' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:31.877" starttime="20160914 19:36:31.785"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:31.879" level="INFO">Typing text 'seth36@clark.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:31.989" starttime="20160914 19:36:31.878"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:31.990" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:32.084" starttime="20160914 19:36:31.990"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:32.085" level="INFO">Typing text 'David' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:32.171" starttime="20160914 19:36:32.085"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:32.173" level="INFO">Typing text 'Guzman' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:32.260" starttime="20160914 19:36:32.171"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:32.261" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:33.327" starttime="20160914 19:36:32.261"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:33.327" starttime="20160914 19:36:30.266"></status>
+</kw>
+<kw type="foritem" name="${X} = 299d6328f1edf6b97568ffa955b2dc43,Colton,ewilliams@smith-diaz.com,pass123,Megan,Peterson">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:33.329" level="INFO">@{employeedatagen} = [ 299d6328f1edf6b97568ffa955b2dc43 | Colton | ewilliams@smith-diaz.com | pass123 | Megan | Peterson ]</msg>
+<status status="PASS" endtime="20160914 19:36:33.329" starttime="20160914 19:36:33.328"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:33.362" starttime="20160914 19:36:33.329"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:33.363" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:33.893" starttime="20160914 19:36:33.362"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:33.895" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:33.902" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:33.902" starttime="20160914 19:36:33.894"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:33.903" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:33.903" starttime="20160914 19:36:33.902"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:33.904" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:34.524" starttime="20160914 19:36:33.904"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:34.525" level="INFO">Typing text '299d6328f1edf6b97568ffa955b2dc43' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:34.686" starttime="20160914 19:36:34.524"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:34.688" level="INFO">Typing text 'Colton' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:34.783" starttime="20160914 19:36:34.687"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:34.783" level="INFO">Typing text 'ewilliams@smith-diaz.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:34.913" starttime="20160914 19:36:34.783"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:34.914" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:35.008" starttime="20160914 19:36:34.913"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:35.009" level="INFO">Typing text 'Megan' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:35.101" starttime="20160914 19:36:35.008"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:35.102" level="INFO">Typing text 'Peterson' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:35.195" starttime="20160914 19:36:35.102"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:35.196" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:35.894" starttime="20160914 19:36:35.196"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:35.894" starttime="20160914 19:36:33.328"></status>
+</kw>
+<kw type="foritem" name="${X} = 4c47b1da2b8e7b603900ba9c087cac7a,Deanna,thomaswheeler@yahoo.com,pass123,Vincent,Wells">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:35.895" level="INFO">@{employeedatagen} = [ 4c47b1da2b8e7b603900ba9c087cac7a | Deanna | thomaswheeler@yahoo.com | pass123 | Vincent | Wells ]</msg>
+<status status="PASS" endtime="20160914 19:36:35.895" starttime="20160914 19:36:35.894"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:35.921" starttime="20160914 19:36:35.895"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:35.921" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:36.429" starttime="20160914 19:36:35.921"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:36.430" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:36.436" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:36.436" starttime="20160914 19:36:36.430"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:36.437" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:36.438" starttime="20160914 19:36:36.437"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:36.438" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:36.914" starttime="20160914 19:36:36.438"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:36.915" level="INFO">Typing text '4c47b1da2b8e7b603900ba9c087cac7a' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:37.099" starttime="20160914 19:36:36.914"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:37.100" level="INFO">Typing text 'Deanna' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:37.193" starttime="20160914 19:36:37.100"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:37.194" level="INFO">Typing text 'thomaswheeler@yahoo.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:37.310" starttime="20160914 19:36:37.193"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:37.312" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:37.405" starttime="20160914 19:36:37.311"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:37.406" level="INFO">Typing text 'Vincent' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:37.496" starttime="20160914 19:36:37.405"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:37.497" level="INFO">Typing text 'Wells' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:37.581" starttime="20160914 19:36:37.496"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:37.582" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:40.087" starttime="20160914 19:36:37.582"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:40.087" starttime="20160914 19:36:35.894"></status>
+</kw>
+<kw type="foritem" name="${X} = 9ddcacd15e8b973794fc4c529eb1d40a,Timothy,ataylor@gmail.com,pass123,Mary,Rogers">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:40.089" level="INFO">@{employeedatagen} = [ 9ddcacd15e8b973794fc4c529eb1d40a | Timothy | ataylor@gmail.com | pass123 | Mary | Rogers ]</msg>
+<status status="PASS" endtime="20160914 19:36:40.089" starttime="20160914 19:36:40.088"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:40.124" starttime="20160914 19:36:40.089"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:40.125" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:40.780" starttime="20160914 19:36:40.125"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:40.781" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:40.785" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:40.786" starttime="20160914 19:36:40.780"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:40.786" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:40.786" starttime="20160914 19:36:40.786"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:40.787" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:41.399" starttime="20160914 19:36:40.787"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:41.400" level="INFO">Typing text '9ddcacd15e8b973794fc4c529eb1d40a' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:41.563" starttime="20160914 19:36:41.400"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:41.564" level="INFO">Typing text 'Timothy' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:41.654" starttime="20160914 19:36:41.563"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:41.655" level="INFO">Typing text 'ataylor@gmail.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:41.760" starttime="20160914 19:36:41.654"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:41.761" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:41.857" starttime="20160914 19:36:41.760"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:41.858" level="INFO">Typing text 'Mary' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:41.940" starttime="20160914 19:36:41.857"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:41.941" level="INFO">Typing text 'Rogers' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:42.024" starttime="20160914 19:36:41.940"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:42.025" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:42.816" starttime="20160914 19:36:42.025"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:42.816" starttime="20160914 19:36:40.088"></status>
+</kw>
+<kw type="foritem" name="${X} = 1c163c0937acf009e088455c510bd546,Danielle,wwilliamson@johnson.info,pass123,Craig,Mendez">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:42.817" level="INFO">@{employeedatagen} = [ 1c163c0937acf009e088455c510bd546 | Danielle | wwilliamson@johnson.info | pass123 | Craig | Mendez ]</msg>
+<status status="PASS" endtime="20160914 19:36:42.817" starttime="20160914 19:36:42.817"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:42.850" starttime="20160914 19:36:42.818"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:42.850" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:43.348" starttime="20160914 19:36:42.850"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:43.349" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:43.355" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:43.355" starttime="20160914 19:36:43.348"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:43.356" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:43.356" starttime="20160914 19:36:43.356"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:43.357" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:43.821" starttime="20160914 19:36:43.356"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:43.822" level="INFO">Typing text '1c163c0937acf009e088455c510bd546' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:44.003" starttime="20160914 19:36:43.822"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:44.005" level="INFO">Typing text 'Danielle' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:44.096" starttime="20160914 19:36:44.004"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:44.098" level="INFO">Typing text 'wwilliamson@johnson.info' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:44.224" starttime="20160914 19:36:44.097"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:44.225" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:44.313" starttime="20160914 19:36:44.224"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:44.314" level="INFO">Typing text 'Craig' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:44.402" starttime="20160914 19:36:44.313"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:44.402" level="INFO">Typing text 'Mendez' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:44.489" starttime="20160914 19:36:44.402"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:44.490" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:45.123" starttime="20160914 19:36:44.490"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:45.123" starttime="20160914 19:36:42.816"></status>
+</kw>
+<kw type="foritem" name="${X} = a6f054b536abefa8334a5e54377f1da4,Linda,woodjose@kirby-valdez.com,pass123,Janet,Gordon">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:45.125" level="INFO">@{employeedatagen} = [ a6f054b536abefa8334a5e54377f1da4 | Linda | woodjose@kirby-valdez.com | pass123 | Janet | Gordon ]</msg>
+<status status="PASS" endtime="20160914 19:36:45.125" starttime="20160914 19:36:45.124"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:45.153" starttime="20160914 19:36:45.125"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:45.154" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:45.642" starttime="20160914 19:36:45.154"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:45.643" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:45.648" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:45.648" starttime="20160914 19:36:45.642"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:45.648" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:45.648" starttime="20160914 19:36:45.648"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:45.649" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:46.108" starttime="20160914 19:36:45.649"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:46.109" level="INFO">Typing text 'a6f054b536abefa8334a5e54377f1da4' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:46.257" starttime="20160914 19:36:46.108"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:46.258" level="INFO">Typing text 'Linda' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:46.384" starttime="20160914 19:36:46.257"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:46.385" level="INFO">Typing text 'woodjose@kirby-valdez.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:46.505" starttime="20160914 19:36:46.385"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:46.507" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:46.595" starttime="20160914 19:36:46.506"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:46.596" level="INFO">Typing text 'Janet' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:46.683" starttime="20160914 19:36:46.595"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:46.683" level="INFO">Typing text 'Gordon' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:46.767" starttime="20160914 19:36:46.683"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:46.767" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:47.262" starttime="20160914 19:36:46.767"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:47.262" starttime="20160914 19:36:45.123"></status>
+</kw>
+<kw type="foritem" name="${X} = 743090efc163adf44891b942bd39b527,Charles,joneschristine@rivera.com,pass123,Eric,Sanchez">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:47.263" level="INFO">@{employeedatagen} = [ 743090efc163adf44891b942bd39b527 | Charles | joneschristine@rivera.com | pass123 | Eric | Sanchez ]</msg>
+<status status="PASS" endtime="20160914 19:36:47.263" starttime="20160914 19:36:47.262"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:47.297" starttime="20160914 19:36:47.264"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:47.298" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:47.702" starttime="20160914 19:36:47.298"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:47.703" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:47.707" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:47.708" starttime="20160914 19:36:47.702"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:47.710" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:47.710" starttime="20160914 19:36:47.708"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:47.711" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:48.476" starttime="20160914 19:36:47.711"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:48.477" level="INFO">Typing text '743090efc163adf44891b942bd39b527' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:48.612" starttime="20160914 19:36:48.476"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:48.613" level="INFO">Typing text 'Charles' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:48.705" starttime="20160914 19:36:48.612"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:48.706" level="INFO">Typing text 'joneschristine@rivera.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:48.827" starttime="20160914 19:36:48.705"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:48.828" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:48.915" starttime="20160914 19:36:48.827"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:48.916" level="INFO">Typing text 'Eric' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:49.002" starttime="20160914 19:36:48.915"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:49.002" level="INFO">Typing text 'Sanchez' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:49.090" starttime="20160914 19:36:49.002"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:49.091" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:50.013" starttime="20160914 19:36:49.090"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:50.013" starttime="20160914 19:36:47.262"></status>
+</kw>
+<kw type="foritem" name="${X} = ac6c3da3c63b1df4d28a49c09c1a2d53,Justin,jacksonmichael@gmail.com,pass123,Mark,Robertson">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:50.015" level="INFO">@{employeedatagen} = [ ac6c3da3c63b1df4d28a49c09c1a2d53 | Justin | jacksonmichael@gmail.com | pass123 | Mark | Robertson ]</msg>
+<status status="PASS" endtime="20160914 19:36:50.015" starttime="20160914 19:36:50.014"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:50.040" starttime="20160914 19:36:50.015"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:50.040" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:50.471" starttime="20160914 19:36:50.040"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:50.471" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:50.478" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:50.478" starttime="20160914 19:36:50.471"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:50.479" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:50.480" starttime="20160914 19:36:50.479"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:50.481" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:50.997" starttime="20160914 19:36:50.480"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:50.998" level="INFO">Typing text 'ac6c3da3c63b1df4d28a49c09c1a2d53' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:51.156" starttime="20160914 19:36:50.997"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:51.157" level="INFO">Typing text 'Justin' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:51.249" starttime="20160914 19:36:51.156"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:51.250" level="INFO">Typing text 'jacksonmichael@gmail.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:51.383" starttime="20160914 19:36:51.249"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:51.384" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:51.474" starttime="20160914 19:36:51.384"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:51.475" level="INFO">Typing text 'Mark' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:51.556" starttime="20160914 19:36:51.474"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:51.557" level="INFO">Typing text 'Robertson' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:51.646" starttime="20160914 19:36:51.557"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:51.647" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:52.504" starttime="20160914 19:36:51.646"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:52.504" starttime="20160914 19:36:50.014"></status>
+</kw>
+<kw type="foritem" name="${X} = b84cda3d47be67934e5dac8b91e63c19,Christian,bethanyjohnson@robinson.com,pass123,Kevin,Jacobs">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:52.506" level="INFO">@{employeedatagen} = [ b84cda3d47be67934e5dac8b91e63c19 | Christian | bethanyjohnson@robinson.com | pass123 | Kevin | Jacobs ]</msg>
+<status status="PASS" endtime="20160914 19:36:52.506" starttime="20160914 19:36:52.505"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:52.535" starttime="20160914 19:36:52.506"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:52.536" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:53.056" starttime="20160914 19:36:52.535"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:53.057" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:53.064" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:53.064" starttime="20160914 19:36:53.057"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:53.065" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:53.065" starttime="20160914 19:36:53.065"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:53.066" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:53.124" starttime="20160914 19:36:53.066"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:53.126" level="INFO">Typing text 'b84cda3d47be67934e5dac8b91e63c19' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:54.004" starttime="20160914 19:36:53.125"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:54.006" level="INFO">Typing text 'Christian' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:54.109" starttime="20160914 19:36:54.005"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:54.110" level="INFO">Typing text 'bethanyjohnson@robinson.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:54.238" starttime="20160914 19:36:54.109"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:54.239" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:54.344" starttime="20160914 19:36:54.238"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:54.345" level="INFO">Typing text 'Kevin' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:54.436" starttime="20160914 19:36:54.344"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:54.437" level="INFO">Typing text 'Jacobs' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:54.527" starttime="20160914 19:36:54.436"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:54.528" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:55.455" starttime="20160914 19:36:54.527"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:55.455" starttime="20160914 19:36:52.504"></status>
+</kw>
+<kw type="foritem" name="${X} = 32caa7967d9b13e31c460c096729195e,Kristen,mbell@brooks.com,pass123,Miguel,Davidson">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:55.457" level="INFO">@{employeedatagen} = [ 32caa7967d9b13e31c460c096729195e | Kristen | mbell@brooks.com | pass123 | Miguel | Davidson ]</msg>
+<status status="PASS" endtime="20160914 19:36:55.457" starttime="20160914 19:36:55.456"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:55.484" starttime="20160914 19:36:55.457"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:55.484" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:55.945" starttime="20160914 19:36:55.484"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:55.945" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:55.950" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:55.950" starttime="20160914 19:36:55.945"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:55.951" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:55.951" starttime="20160914 19:36:55.951"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:55.951" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:56.450" starttime="20160914 19:36:55.951"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:56.451" level="INFO">Typing text '32caa7967d9b13e31c460c096729195e' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:56.623" starttime="20160914 19:36:56.450"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:56.625" level="INFO">Typing text 'Kristen' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:56.718" starttime="20160914 19:36:56.624"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:56.718" level="INFO">Typing text 'mbell@brooks.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:56.822" starttime="20160914 19:36:56.718"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:56.823" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:56.911" starttime="20160914 19:36:56.822"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:56.912" level="INFO">Typing text 'Miguel' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:57.004" starttime="20160914 19:36:56.911"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:57.006" level="INFO">Typing text 'Davidson' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:36:57.093" starttime="20160914 19:36:57.005"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:57.094" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:36:57.782" starttime="20160914 19:36:57.093"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:36:57.782" starttime="20160914 19:36:55.455"></status>
+</kw>
+<kw type="foritem" name="${X} = c62d54bb0eab7423c145774ad440781e,Alexis,douglaswalker@yahoo.com,pass123,Joseph,Taylor">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${X}</arg>
+<arg>separator=,</arg>
+</arguments>
+<assign>
+<var>@{employeedatagen}</var>
+</assign>
+<msg timestamp="20160914 19:36:57.783" level="INFO">@{employeedatagen} = [ c62d54bb0eab7423c145774ad440781e | Alexis | douglaswalker@yahoo.com | pass123 | Joseph | Taylor ]</msg>
+<status status="PASS" endtime="20160914 19:36:57.783" starttime="20160914 19:36:57.782"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<status status="PASS" endtime="20160914 19:36:57.815" starttime="20160914 19:36:57.784"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${employee_admin_page_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:57.815" level="INFO">Clicking link 'css=#content &gt; div.col-md-2.sidebar-container &gt; div &gt; a:nth-child(8)'.</msg>
+<status status="PASS" endtime="20160914 19:36:58.263" starttime="20160914 19:36:57.815"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>var url = location.href;</arg>
+<arg>return url;</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20160914 19:36:58.264" level="INFO">Executing JavaScript:
+var url = location.href;return url;</msg>
+<msg timestamp="20160914 19:36:58.269" level="INFO">${actual} = http://qateam4.pragger.com/dashboard/admin_employees</msg>
+<status status="PASS" endtime="20160914 19:36:58.269" starttime="20160914 19:36:58.263"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${employeeadminurl}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:58.270" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20160914 19:36:58.270" starttime="20160914 19:36:58.269"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=${add_employee_link_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:36:58.270" level="INFO">Clicking link 'css=#content &gt; div.col-md-10.dashboard-container &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" endtime="20160914 19:36:59.392" starttime="20160914 19:36:58.270"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_code_field_locator_css}</arg>
+<arg>@{employeedatagen}[0]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:59.393" level="INFO">Typing text 'c62d54bb0eab7423c145774ad440781e' into text field 'css=#add_employee_employee_number'</msg>
+<status status="PASS" endtime="20160914 19:36:59.531" starttime="20160914 19:36:59.393"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_username_field_locator_css}</arg>
+<arg>@{employeedatagen}[1]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:59.532" level="INFO">Typing text 'Alexis' into text field 'css=#add_employee_username'</msg>
+<status status="PASS" endtime="20160914 19:36:59.623" starttime="20160914 19:36:59.531"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_email_field_locator_css}</arg>
+<arg>@{employeedatagen}[2]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:59.624" level="INFO">Typing text 'douglaswalker@yahoo.com' into text field 'css=#add_employee_email'</msg>
+<status status="PASS" endtime="20160914 19:36:59.740" starttime="20160914 19:36:59.623"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_password_field_locator_css}</arg>
+<arg>@{employeedatagen}[3]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:59.741" level="INFO">Typing text 'pass123' into text field 'css=#add_employee_password'</msg>
+<status status="PASS" endtime="20160914 19:36:59.829" starttime="20160914 19:36:59.740"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_firstname_field_locator_css}</arg>
+<arg>@{employeedatagen}[4]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:59.830" level="INFO">Typing text 'Joseph' into text field 'css=#add_employee_first_name'</msg>
+<status status="PASS" endtime="20160914 19:36:59.920" starttime="20160914 19:36:59.829"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=${employee_lastname_field_locator_css}</arg>
+<arg>@{employeedatagen}[5]</arg>
+</arguments>
+<msg timestamp="20160914 19:36:59.921" level="INFO">Typing text 'Taylor' into text field 'css=#add_employee_last_name'</msg>
+<status status="PASS" endtime="20160914 19:37:00.011" starttime="20160914 19:36:59.920"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=${add_employee_btn_locator_css}</arg>
+</arguments>
+<msg timestamp="20160914 19:37:00.012" level="INFO">Clicking button 'css=#add_employee &gt; button'.</msg>
+<status status="PASS" endtime="20160914 19:37:00.634" starttime="20160914 19:37:00.012"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:37:00.634" starttime="20160914 19:36:57.782"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:37:00.635" starttime="20160914 19:36:07.760"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:37:00.635" starttime="20160914 19:36:07.759"></status>
+</kw>
+<status status="PASS" endtime="20160914 19:37:00.635" critical="yes" starttime="20160914 19:35:47.534"></status>
 </test>
-<status status="PASS" endtime="20160914 16:24:15.243" starttime="20160914 16:24:00.979"></status>
+<status status="PASS" endtime="20160914 19:37:00.638" starttime="20160914 19:35:43.864"></status>
 </suite>
 <statistics>
 <total>

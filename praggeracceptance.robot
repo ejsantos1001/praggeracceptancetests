@@ -11,6 +11,7 @@ Team Login
     THEN a user is able to open the team dashboard page
 
 Add employee
+
     GIVEN a user is able to team login
-    THEN a user is able to add an employee
+    THEN a user is able to submit employee data
 
