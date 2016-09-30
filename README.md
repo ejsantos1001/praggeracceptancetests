@@ -2,20 +2,20 @@
 # Installation
 - Install python
 
-    https://www.python.org/
+-- https://www.python.org/
 
 - Install pip
 
-    https://pip.pypa.io/en/stable/installing/
+-- https://pip.pypa.io/en/stable/installing/
 
 - Install robotframework
   
-    pip install robotframework
+-- pip install robotframework
 
 - Install the required libraries
 
-    see resource.robot file
-    ex.  pip install robotframework-selenium2library
+-- see resource.robot file
+-- ex.  pip install robotframework-selenium2library
 
 - download the chrome driver
 
