@@ -1,5 +1,5 @@
 #teamloginpage
-teamdomainfield_location_css='#home_login_team_web_address'
+teamdomainfield_location_css='#register_team_web_address'
 usernameemailfield_locatain_css='#home_login_username'
 passwordfield_locaiton_css='#home_login_password'
 submit_button_css='#home_login_submit'
@@ -18,3 +18,11 @@ employee_firstname_field_locator_css='#add_employee_first_name'
 employee_lastname_field_locator_css='#add_employee_last_name'
 add_employee_btn_locator_css='#add_employee > button'	
 add_employee_success_message_locator_css='#add_employee_response_msg'
+#registrationfrom
+register_teamwebaddress_field='#register_team_web_address'
+register_username_field='#register_username'
+register_email_field='#register_email'
+register_password_field='#register_password'
+register_firstname_field='#register_first_name'
+register_lastname_field='#register_last_name'
+register_createteam_button_locator_css='#register_submit'

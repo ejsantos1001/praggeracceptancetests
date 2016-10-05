@@ -12,12 +12,16 @@ a user is in the register page
     Open Browser      ${registerurl}                    chrome
 
 a user sumbits a filled registration form
-    Execute Javascript   document.querySelector('${teamdomainfield_location_css}').value='&{teamleaduser}[teamdomain]'
-    Input Text        css=#register_username            testusername
-    Input Text        css=#register_email               testemail@gmail.com
-    Input Password    css=#register_password            testpass
-    Input Text        css=#register_first_name          testfirst
-    Input Text        css=#register_last_name           testlast
+    Execute Javascript   document.querySelector('${register_teamwebaddress_field}').value='${generatedteamname}'
+    Execute Javascript   document.querySelector('${register_username_field}').value='${generatedusername}'
+    Execute Javascript   document.querySelector('${register_email_field}').value='${generatedemail}'
+    Execute Javascript   document.querySelector('${register_password_field}').value='${defaultpassword}'
+    Execute Javascript   document.querySelector('${register_firstname_field}').value='${generatedfirstname}'
+    Execute Javascript   document.querySelector('${register_lastname_field}').value='${generatedlastname}'
+    Click button   css=${register_createteam_button_locator_css}
+
+after 7 seconds
+    Sleep  7
 
 a user is able to team login
     a user is able to open the team login page
@@ -34,6 +38,10 @@ a user submits a team login form
     Execute Javascript   document.querySelector('${usernameemailfield_locatain_css}').value='&{teamleaduser}[username]'
     Execute Javascript   document.querySelector('${passwordfield_locaiton_css}').value='&{teamleaduser}[password]'
     Click Button    css=${submit_button_css}
+
+a user lands on the newly registered team dashboard page
+    ${actual}      Execute Javascript   var url = location.href;   return url;
+    Should be equal   ${actual}       ${generatedteam_dashboard_url}
 
 a user lands on the team dashboard page
     ${actual}      Execute Javascript   var url = location.href;   return url;
